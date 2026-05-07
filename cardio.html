@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lifeline Hospital - Cardiology</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f9ff;
+padding:40px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+cursor:pointer;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h2{
+color:#0077b6;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:17px;
+color:#444;
+}
+
+.details{
+display:none;
+margin-top:25px;
+padding:25px;
+background:#eef7ff;
+border-radius:12px;
+animation:fade .4s ease;
+}
+
+.details h3{
+color:#0077b6;
+margin-bottom:10px;
+margin-top:10px;
+}
+
+.details ul{
+padding-left:20px;
+margin-bottom:15px;
+}
+
+.details li{
+margin-bottom:8px;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 22px;
+background:#0077b6;
+color:#fff;
+text-decoration:none;
+border-radius:8px;
+}
+
+.btn:hover{
+background:#023e8a;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(-10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card" onclick="showDetails()">
+
+<h2>Cardiology Department</h2>
+<p>Heart specialist treatment, surgery and emergency support.</p>
+
+<div class="details" id="cardiologyBox">
+
+<h3>Available Treatments</h3>
+<ul>
+<li>Heart Checkup</li>
+<li>ECG Test</li>
+<li>Echocardiography</li>
+<li>Angiography</li>
+<li>Heart Surgery</li>
+<li>Pacemaker Implant</li>
+<li>Blood Pressure Monitoring</li>
+</ul>
+
+<h3>Specialist Doctors</h3>
+<ul>
+<li>Dr. John Smith</li>
+<li>Dr. Arjun Mehta</li>
+<li>Dr. Raj Patel</li>
+</ul>
+
+<h3>Department Timing</h3>
+<p>Monday - Saturday : 9:00 AM to 7:00 PM</p>
+
+<h3>Emergency Service</h3>
+<p>24/7 Cardiac Emergency Available</p>
+
+<a href="#" class="btn">Close</a>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+function showDetails(){
+
+let box = document.getElementById("cardiologyBox");
+
+if(box.style.display === "block"){
+box.style.display = "none";
+}else{
+box.style.display = "block";
+}
+
+}
+</script>
+
+</body>
+</html>
